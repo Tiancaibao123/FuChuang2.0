@@ -1,0 +1,483 @@
+
+<view class="view1"> 
+  <view class="view2">
+    <image class="img1" src="../../img/mat1.png"></image>
+    <view class="view3">
+
+      <view class="view3-1">
+      <text class="text1">
+      1月账单
+      </text>
+      </view>
+
+      <view class="view3-2">
+      <text class="text2">
+      总资产：60000.00
+      </text>
+      </view>
+
+      <view class="view3-3">
+      <text class="text3">
+      —————————
+      </text>
+      </view>
+
+      <view class="view3-4">
+        <view class="view3-4-1">
+          <text class="text4">
+            本月收入：6000.00 
+          </text>
+        </view>
+        <view class="view3-4-2">
+         <text class="text4">
+          本月支出：3000.00
+        </text>
+        </view>
+      </view>
+
+    </view>
+    <van-circle class="vancircle" stroke-width="12" size="90"value="{{ 60 }}" text="02月总预算" font="red" color="rgb(249,219,97)" />
+    
+  </view>
+</view>
+
+<!-- view3 用于功能选择 -->
+<view class="view4">
+  <view class="view4-0-1">
+    <view class="view4-1">
+      <image class="img4-1" src="../../img/shouzhi.png"></image>
+      <view class="view4-1-1">
+        <text class=">text4-1">
+        收支录入
+        </text>
+      </view>
+    </view>
+
+    <view class="view4-2">
+      <text class="text4-2">
+      —————————
+      </text>
+    </view>
+
+    <view class="view4-3">
+        <image class="img4-2" src="../../img/jilu.png"></image>
+        <text class="text4-3">
+          累计记账天数：1000天
+        </text>
+    </view>
+    <view class="view4-4">
+        <image class="img4-3" src="../../img/tianshu.png"></image>
+        <text class="text4-4">
+          累计记账次数：{{cishu}}次
+        </text>
+        <!-- <text class="text4-5">
+          AI记账
+        </text>
+        <text class="text4-6">
+          手动记账
+        </text> -->
+    </view>
+  </view>
+
+  <view class="4-0-2">
+    <view class="view4-0-2-1" > 
+      <image class="img4-0-1" src="../../img/Ai (1).png" bind:tap="click2"></image>
+      <text class="text4-0-1">AI录入</text>
+    </view>
+  </view>
+  <view class="4-0-3">
+    <view class="view4-0-3-1" > 
+      <image class="img4-0-2" src="../../img/bianji.png" bind:tap="showPopup1"></image>
+      <text class="text4-0-2">手动录入</text>
+    </view>
+  </view>
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<!-- view5用于展示消费记录 -->
+<scroll-view class="view5" scroll-y>
+  <view class="view5-1">
+  <van-notice-bar
+  color="#1989fa"
+  background="#ecf9ff"
+  text="近期收支记录"
+  />
+  </view>
+
+  <!-- view5-2是每项记录的详细组成 -->
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+  <view class="view5-2"> 
+    <view class="view5-2-1">
+      <image class="img5-1" src="../../img/kuaidi.png"></image>
+      <view class="5-2-1-1">
+        <text class="text5-1">
+          快递
+        </text>
+        <view class="view5-2-1-1-1">
+          <text class="text5-2">
+            2020-3-4
+          </text>
+          <text class="text5-3">
+          -280.00
+          </text>
+        </view>
+      </view>
+
+      <view class="view5-2-1-2">
+        <text class="text5-4">
+          ___________________________________________
+        </text>
+      </view>
+
+      
+    </view>  
+  </view>
+
+
+
+
+
+</scroll-view>
+
+
+
+<van-popup
+  show="{{ show1 }}"
+  round
+  position="bottom"
+  custom-style="height: 80%"
+  bind:close="onClose"
+  closeable
+  close-icon-position="top-right"
+  class="vanpopup1"
+>
+<!-- van-popup中内容 -->
+<van-notice-bar
+  color="#1989fa"
+  background="#ecf9ff"
+  text="消费类型手动选择"
+  wrapable
+  />
+<van-grid class="vangrid1"
+square style="margin: 80%;" clickable="true"
+style="margin-top: 1000rpx;"
+>
+  <van-grid-item bind:click="click1" icon="send-gift" text="快递" />
+  <van-grid-item bind:click="click2" icon="clock" text="办公"  /> 
+  <van-grid-item bind:click="click3" icon="wap-home" text="房屋装饰"  />
+  <van-grid-item bind:click="click4" icon="cart" text="日用"  />
+  <van-grid-item bind:click="click5" icon="location" text="交通"  />
+  <van-grid-item bind:click="click6" icon="phone" text="通讯"  /> 
+  <van-grid-item bind:click="click7" icon="smile" text="日用"  />
+  <van-grid-item bind:click="click8" icon="printer" text="数码电器"  />
+</van-grid>
+
+
+
+
+<!-- van-popup结束 -->
+</van-popup>
+
+
+<van-tabbar active="{{ active }}" bind:change="onChange1">
+  <van-tabbar-item name="home" icon="home-o">标签</van-tabbar-item>
+  <van-tabbar-item name="search" icon="search">标签</van-tabbar-item>
+  <van-tabbar-item name="friends" icon="friends-o">标签</van-tabbar-item>
+  <van-tabbar-item name="setting" icon="setting-o">标签</van-tabbar-item>
+</van-tabbar>

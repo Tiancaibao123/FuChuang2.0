@@ -1,0 +1,5 @@
+<!--pages/display/display.wxml-->
+<view class="bottom-echarts">
+      <ec-canvas id="streetlinechart" canvas-id="streetlinechart" ec="{{streetlinechartec}}"></ec-canvas>
+   </view>
+

@@ -1,0 +1,63 @@
+/* pages/handrecorddetail/handrecorddetail.wxss */
+.view1{
+    margin-top: 50rpx;
+}
+.view2{
+
+    justify-content: center;
+}
+.vancellgroup1{
+    
+
+
+}
+.vancell1{
+
+}
+/* pages/jsCase/multiTime/index4.wxss */
+.act_item {
+    background: #FFFFFF;
+    border-radius: 16rpx;
+
+    box-sizing: border-box;
+    padding: 24rpx;
+    position: relative;
+    font-size: 28rpx;
+    color: #4D4D4D;
+    font-weight: 500;
+    height: 100rpx;
+  }
+  
+  .require {
+    color: #E9543E;
+  }
+  
+  .nowp {
+    white-space: nowrap;
+    margin-right: 15rpx;
+  }
+  
+  .act_right {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -35rpx;
+    font-size: 28rpx;
+    color: #999;
+  }
+  
+  .act_item picker {
+    flex: 1;
+    margin-left: 40rpx;
+  }
+  
+  .act_box {
+
+    width: 100%;
+  }
+  
+  .sel_text {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #4D4D4D;
+  }
+  

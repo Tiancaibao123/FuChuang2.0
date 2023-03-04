@@ -1,0 +1,74 @@
+<!--pages/handrecorddetail/handrecorddetail.wxml-->
+
+
+<!-- view1开始 -->
+<view class="view1">
+<!-- <van-cell-group inset size="mini" class="vancellgroup1" >
+<van-cell  size="mini" icon="clock"  class="vancell1" title="选择单个日期" is-link  value="{{ date }}" bind:click="onDisplaytime" />
+<van-calendar show="{{ showtime }}" bind:close="onClosetime" bind:confirm="onConfirmtime" />
+</van-cell-group> -->
+<!--pages/jsCase/multiTime/index4.wxml-->
+<view class="act_box">
+  <view class="act_item flex j_b">
+    <view class="nowp"><text class="require">*</text>
+      选择时间：
+    </view>
+    <picker mode="multiSelector" value="{{start_time}}" data-type="start_time" data-param='start_time_p' bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+      <view class="flex-row act_right">
+        <text wx:if="{{!start_time_p}}">请选择</text>
+        <text wx:else class="sel_text">{{start_time_p}}</text>
+      </view>
+    </picker>
+  </view>
+</view>
+
+
+</view>
+<!-- view1结束 -->
+
+<van-cell-group class="vancellgroup2">
+  <van-field left-icon="gold-coin"
+    model:value="{{ money }}"
+    placeholder="请输入金额"
+    border="{{ false }}"
+    bind:change="onChange"
+  >
+    <van-button color='' font-color="black" slot="button" size="small" type="primary">
+      单位：元
+    </van-button>
+</van-field>
+</van-cell-group>
+
+<van-collapse class="vancollapse1 " value="{{ activeNames }}" bind:change="onChange1">
+  <van-collapse-item title="详细信息补充" name="1">
+    <text>以下为单笔记账详细信息的补充</text>
+
+<van-cell-group>
+<van-cell-group>
+  
+  <van-field  
+    model:value="{{ shop }}"
+    label="消费店家"
+    placeholder="请输入"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+
+  <van-field
+    model:value="{{ otherMsg }}"
+    label="备注信息"
+    placeholder="请输入"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+
+</van-cell-group>
+</van-cell-group>
+
+  </van-collapse-item>
+</van-collapse>
+
+<view class="view2" >
+  <van-button size="large" type="primary" bindtap="confirmEntry">确认录入</van-button>
+
+</view>
