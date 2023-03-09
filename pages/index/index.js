@@ -13,7 +13,6 @@ Page({
     showtime:false,
     activeNames: [],
     payment:"200.00"
-
   },
   onChange1(event) {
     this.setData({ active: event.detail });
@@ -42,68 +41,76 @@ Page({
     this.setData({ show1: false });
   },
   click1(){
-      var category="快递"
+      let category="快递"
+      let category1 = JSON.stringify(category)
       console.log(category)
       wx.navigateTo({
-        url: '../handrecorddetail/handrecorddetail',
+        url: '../handrecorddetail/handrecorddetail?category='+category1,
       })
   },
   onClose1() {
     this.setData({ show2: false });
   },
   click2(){
-    var category="消费种类：办公"
+    let category="办公"
+    let category1 = JSON.stringify(category)
     console.log(category)
    wx.navigateTo({
-     url: '../handrecord/handrecord',
+     url: '../handrecorddetail/handrecorddetail?category='+category1,
    })
   
 },
 click3(){
-    var category="消费种类：餐饮"
+    let category="餐饮"
+    let category1 = JSON.stringify(category)
     console.log(category)
    wx.navigateTo({
-     url: '../handrecord/handrecord',
+     url: '../handrecorddetail/handrecorddetail?category='+category1,
    })
   
 },
 click4(){
-    var category="消费种类：日用"
-    console.log(category)
-   wx.navigateTo({
-     url: '../handrecord/handrecord',
+  let category="日用"
+  let category1 = JSON.stringify(category)
+  console.log(category)
+ wx.navigateTo({
+   url: '../handrecorddetail/handrecorddetail?category='+category1,
    })
   
 },
 click5(){
-    var category="消费种类：交通"
-    console.log(category)
-   wx.navigateTo({
-     url: '../handrecord/handrecord',
+  let category="交通"
+  let category1 = JSON.stringify(category)
+  console.log(category)
+ wx.navigateTo({
+   url: '../handrecorddetail/handrecorddetail?category='+category1,
    })
   
 },
 click6(){
-    var category="消费种类：通讯"
-    console.log(category)
-   wx.navigateTo({
-     url: '../handrecord/handrecord',
+  let category="通讯"
+  let category1 = JSON.stringify(category)
+  console.log(category)
+ wx.navigateTo({
+   url: '../handrecorddetail/handrecorddetail?category='+category1,
    })
   
 },
 click7(){
-    var category="消费种类：服务"
-    console.log(category)
-   wx.navigateTo({
-     url: '../handrecord/handrecord',
+  let category="服务"
+  let category1 = JSON.stringify(category)
+  console.log(category)
+ wx.navigateTo({
+   url: '../handrecorddetail/handrecorddetail?category='+category1,
    })
   
 },
 click8(){
-    var category="消费种类：数码电器"
-    console.log(category)
-   wx.navigateTo({
-     url: '../handrecord/handrecord',
+  let category="数码电器"
+  let category1 = JSON.stringify(category)
+  console.log(category)
+ wx.navigateTo({
+   url: '../handrecorddetail/handrecorddetail?category='+category1,
    })
 
    

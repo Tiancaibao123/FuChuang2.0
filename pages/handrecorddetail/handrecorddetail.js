@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        date:'',
+        date:'2023-3-9 ',
         show1:false,
         showtime:false,
         activeNames:[],
@@ -30,15 +30,15 @@ Page({
     },
     onDisplaytime() {
         this.setData({ showtime: true });
-      },
-      onClosetime() {
+    },
+    onClosetime() {
         this.setData({ showtime: false });
-      },
-      formatDatetime(date) {
+    },
+    formatDatetime(date) {
         date = new Date(date);
         return `${date.getMonth()+1}/${date.getDate()}`;
-      },
-      onConfirmtime(event) {
+    },
+    onConfirmtime(event) {
         this.setData({
           showtime: false,
           date: this.formatDatetime(event.detail),
@@ -55,6 +55,13 @@ Page({
         end_time: obj.dateTime,
         dateTimeArray: obj.dateTimeArray,
       });
+
+      // 接收index发送来的消费类型数据
+      let kind = JSON.parse(options.category)
+      this.setData({
+        kind:kind
+      })
+      console.log(this.data.kind)
     },
     /**
      * 选择时间
@@ -86,27 +93,34 @@ Page({
     },
 
     confirmEntry(){
+
+
       console.log(this.data.money)
       console.log(this.data.shop)
       console.log(this.data.otherMsg)
+      console.log(this.data.date)
+ 
       wx.request({
         url: 'https://holer64006.wdom.net/wx/api/consumeInfo/edit',
         method:'POST',
         data:{
-          id:0,
-          userId:'this.data.userId',
-          date:'this.data.date',
-          money:'this.data.money',
-          kind:'',
-          shop:'this.data.shop'
+          "type":1,  // 保存
+          "oldConsumeInfo":null,
+          "newConsumeInfo":{
+            "id":0,
+            "userId":this.data.userId,
+            "date":this.data.date,
+            "money":this.data.money,
+            "kind":this.data.kind,
+            "shop":this.data.shop
+          }
         },
         header:{
-          "Content-Type": 'application/x-www-form-urlencoded'
+          "Content-Type": 'application/json'
         },
         success:(res)=>{
           console.log(res)
         },
-
       })
     },
 
